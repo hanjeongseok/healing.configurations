@@ -1,5 +1,3 @@
-server:
-  port: 8810
 
 spring:
   profiles: local
@@ -15,15 +13,15 @@ servers:
  
 ---
 spring:
-  profiles: prod
+  profiles: real
   cloud:
     config:
       uri: http://localhost:8888
       label: develop
 spring:
-    profiles: prod
-name: prod-YAML
-environment: production
+    profiles: real
+name: real-YAML
+environment: real
 servers: 
     - www.abc.com
     - www.xyz.com
