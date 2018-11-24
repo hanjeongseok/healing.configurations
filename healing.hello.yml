@@ -1,0 +1,20 @@
+server:
+  port: 8810
+
+
+spring:
+    profiles: local
+name: local-YAML
+environment: local
+servers: 
+    - www.abc.local.com
+    - www.xyz.local.com
+ 
+---
+spring:
+    profiles: prod
+name: prod-YAML
+environment: production
+servers: 
+    - www.abc.com
+    - www.xyz.com
