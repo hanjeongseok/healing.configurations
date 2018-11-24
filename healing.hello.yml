@@ -1,16 +1,25 @@
 server:
   port: 8810
 
-
 spring:
-    profiles: local
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: develop
 name: local-YAML
 environment: local
 servers: 
-    - www.abc.local.com
-    - www.xyz.local.com
+    - local.abc.com
+    - local.xyz.com
  
 ---
+spring:
+  profiles: prod
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: develop
 spring:
     profiles: prod
 name: prod-YAML
