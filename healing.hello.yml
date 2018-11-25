@@ -1,5 +1,5 @@
 server:
-  port: 8810
+  port: ${PORT:8810}
 
 ---
 spring:
