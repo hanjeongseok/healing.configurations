@@ -8,8 +8,15 @@ spring:
     config:
       uri: http://localhost:8888
       label: develop
-name: local-YAML
+
+name: local-yml
 environment: local
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 servers: 
     - local.abc.com
     - local.xyz.com
@@ -21,8 +28,14 @@ spring:
     config:
       uri: http://localhost:8888
       label: develop
-name: real-YAML
+name: real-yml
 environment: real
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 servers: 
     - www.abc.com
     - www.xyz.com
