@@ -1,7 +1,5 @@
 server:
   port: 8810
-  profiles:
-    active: local
 
 ---
 spring:
