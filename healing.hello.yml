@@ -23,8 +23,6 @@ spring:
     config:
       uri: http://localhost:8888
       label: develop
-spring:
-    profiles: real
 name: real-YAML
 environment: real
 servers: 
