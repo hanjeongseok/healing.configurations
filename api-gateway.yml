@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+---
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: develop
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+---
+spring:
+  profiles: real
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: develop
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
