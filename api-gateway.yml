@@ -1,6 +1,10 @@
 server:
   port: 8080
 
+ribbon:
+  ConnectTimeout: 120000
+  ReadTimeout: 120000
+
 ---
 spring:
   profiles: local
